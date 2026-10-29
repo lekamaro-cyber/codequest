@@ -125,7 +125,7 @@
 
     return h('div', { class: 'view view-narrow' },
       h('div', { class: 'view-head' }, h('h1', null, 'Profil et paramètres')),
-      profile, badges, goals, looks, data, about);
+      profile, App.pwa.card(), badges, goals, looks, data, about);
   };
   function statTile(v, k) { return h('div', { class: 'stat' }, h('div', { class: 'v' }, v), h('div', { class: 'k' }, k)); }
 })(App);

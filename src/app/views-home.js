@@ -204,7 +204,7 @@
       stat(String(M.dueUnits().length), 'Notions à réviser'),
       stat(String(st.stats.solved), 'Exercices réussis'));
 
-    var view = h('div', { class: 'view' }, head, hero, stats);
+    var view = h('div', { class: 'view' }, head, App.pwa.banner(), hero, stats);
     if (isNew) view.appendChild(h('p', { class: 'small muted', style: { marginTop: '-8px' } }, 'Tout est à zéro : ces chiffres viendront uniquement de ce que tu fais dans l’appli.'));
     view.appendChild(h('div', { class: 'grid grid-3' }, dailyCard(), goalCard(), nextGoalCard(g)));
     view.appendChild(h('div', { class: 'grid grid-2' }, dueCard(), projectsQuick()));

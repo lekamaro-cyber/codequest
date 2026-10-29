@@ -97,6 +97,10 @@
   App.on('storage', renderNav);
   App.on('change', function () { if (App.player.isOpen()) return; renderNav(); });
 
+  App.on('pwa', function () {
+    var r = currentRoute();
+    if (!App.player.isOpen() && (r === 'accueil' || r === 'profil')) App.rerender();
+  });
   App.on('achievement', function (a) { ui.toast({ icon: a.icon, gold: true, title: 'Badge obtenu : ' + a.title, text: a.text }); });
   App.on('freeze', function (n) { ui.toast({ icon: 'shield', title: 'Série préservée', text: ui.plural(n, 'joker utilisé', 'jokers utilisés') + ' pour ' + ui.plural(n, 'jour manqué', 'jours manqués') + '.' }); });
   App.on('freezeEarned', function () { ui.toast({ icon: 'shield', title: 'Joker gagné', text: '7 jours de série : un jour manqué sera couvert automatiquement.' }); });

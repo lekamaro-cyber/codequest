@@ -12,7 +12,7 @@ const read = (p) => fs.readFileSync(path.join(SRC, p), 'utf8');
 
 const core = ['core/registry.js', 'core/htmlchecks.js', 'core/jsharness.js', 'core/minipy.js', 'core/highlight.js', 'core/runners.js'];
 const content = fs.readdirSync(path.join(SRC, 'content')).filter((f) => f.endsWith('.js')).sort().map((f) => 'content/' + f);
-const app = ['app/ui.js', 'app/state.js', 'app/model.js', 'app/editor.js', 'app/exercise.js', 'app/player.js', 'app/placement.js',
+const app = ['app/ui.js', 'app/state.js', 'app/pwa.js', 'app/model.js', 'app/editor.js', 'app/exercise.js', 'app/player.js', 'app/placement.js',
   'app/views-home.js', 'app/views-parcours.js', 'app/views-review.js', 'app/views-practice.js', 'app/views-projects.js',
   'app/views-skills.js', 'app/views-profile.js', 'app/main.js'];
 
@@ -36,7 +36,17 @@ if (ai !== -1) {
   fs.writeFileSync(out, body);
   console.log('artefact : ' + out + ' (' + Math.round(body.length / 1024) + ' Ko)');
 } else {
-  const full = '<!doctype html>\n<html lang="fr">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<meta name="theme-color" content="#0b0e14">\n'
+  // Version publiée : application installable (manifeste, icônes, service worker enregistré par src/app/pwa.js).
+  const pwa = [
+    '<link rel="manifest" href="manifest.webmanifest">',
+    '<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">',
+    '<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">',
+    '<meta name="mobile-web-app-capable" content="yes">',
+    '<meta name="apple-mobile-web-app-capable" content="yes">',
+    '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">',
+    '<meta name="apple-mobile-web-app-title" content="CodeQuest">'
+  ].join('\n') + '\n';
+  const full = '<!doctype html>\n<html lang="fr">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<meta name="theme-color" content="#0b0e14">\n' + pwa
     + body.replace(/<div class="app"/, '</head>\n<body>\n<div class="app"') + '\n</body>\n</html>\n';
   const out = path.join(ROOT, 'index.html');
   fs.writeFileSync(out, full);

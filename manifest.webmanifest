@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "CodeQuest",
+  "short_name": "CodeQuest",
+  "description": "Apprends à coder. Construis pour de vrai. Python, web, JavaScript, SQL, Git, back-end, data et IA, avec du code exécuté pour de vrai.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b0e14",
+  "theme_color": "#0b0e14",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Continuer mon parcours", "short_name": "Continuer", "url": "./#parcours", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Réviser", "url": "./#reviser", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Pratique", "url": "./#pratique", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

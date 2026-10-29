@@ -10,7 +10,19 @@ L'application a d'abord été construite dans le dépôt `pile-poil` (à côté 
 
 ## Ouvrir l'application
 
-- **Sur GitHub Pages** : https://lekamaro-cyber.github.io/codequest/ (une fois Pages activé pour ce dépôt).
+- **Sur ton téléphone ou ton ordinateur** : https://lekamaro-cyber.github.io/codequest/
+
+## Installer l'application sur ton téléphone
+
+CodeQuest est une application web installable : icône sur l'écran d'accueil, plein écran, fonctionnement hors connexion,
+mises à jour automatiques. Pas de boutique d'applications, pas de compte.
+
+- **Android (Chrome)** : ouvre le lien ci-dessus, touche « Installer » dans le bandeau de l'accueil, ou le menu ⋮ puis
+  « Installer l'application ».
+- **iPhone (Safari)** : ouvre le lien, touche Partager, puis « Sur l'écran d'accueil ».
+
+Les fichiers qui rendent l'appli installable : `manifest.webmanifest` (nom, couleurs, icônes), `sw.js` (hors connexion)
+et le dossier `icons/` (fabriqué par `node tools/make-icons.mjs`).
 - **Sur ton ordinateur** : télécharge le dépôt et ouvre `index.html` dans Chrome, Edge ou Firefox (double-clic).
 - **En ligne** : l'artefact Claude https://claude.ai/artifact/DK7QKud74uLFmZH1J3qu7K (privé : visible seulement par
   son propriétaire et les personnes avec qui il est partagé). Il sauvegarde ta progression sur ton compte claude.ai.

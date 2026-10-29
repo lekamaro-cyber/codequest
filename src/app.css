@@ -523,3 +523,13 @@ button.mini-row:hover { border-color: var(--accent-line); }
 /* Pendant une leçon, les notifications passent en haut pour ne jamais couvrir les boutons du bas. */
 .player:not([hidden]) ~ .toasts { top: calc(72px + env(safe-area-inset-top, 0px)); bottom: auto; }
 @media (max-width: 759px) { .player:not([hidden]) ~ .toasts { top: calc(64px + env(safe-area-inset-top, 0px)); } }
+
+/* Installation sur le téléphone */
+.install-banner { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 12px 14px; padding: 14px 16px; border-radius: var(--radius); background: var(--accent-soft); border: 1px solid var(--accent-line); }
+.install-text { min-width: 0; }
+.install-actions { display: flex; gap: 6px; justify-content: flex-end; flex-wrap: wrap; }
+@media (max-width: 640px) { .install-banner { grid-template-columns: 48px minmax(0, 1fr); } .install-actions { grid-column: 1 / -1; } }
+.install-banner img { width: 48px; height: 48px; border-radius: 12px; flex: none; }
+.install-steps { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; color: var(--fg-2); }
+.install-steps li { line-height: 1.55; overflow-wrap: anywhere; }
+.install-steps strong { color: var(--fg); }
