@@ -3,8 +3,8 @@
 // et avec MiniPy ; on compare la sortie standard, le type et le message de l'erreur, et sa ligne.
 //
 // Utilisation :
-//   node codequest/tools/minipy-diff.mjs            -> tout le corpus
-//   node codequest/tools/minipy-diff.mjs dict       -> seulement les fichiers dont le chemin contient « dict »
+//   node tools/minipy-diff.mjs            -> tout le corpus
+//   node tools/minipy-diff.mjs dict       -> seulement les fichiers dont le chemin contient « dict »
 //   options : --verbose (affiche les sorties complètes), --quiet (seulement le total), --jobs=8
 //
 // Directives possibles en tête d'un fichier du corpus (lignes commençant par « #! ») :

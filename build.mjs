@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Assemble CodeQuest en une seule page HTML.
-//   node codequest/build.mjs                    -> codequest/index.html (page complète, ouvrable telle quelle)
-//   node codequest/build.mjs --artifact <fichier> -> version « artefact » (sans <html>/<head>/<body>)
+//   node build.mjs                    -> index.html (page complète, ouvrable telle quelle)
+//   node build.mjs --artifact <fichier> -> version « artefact » (sans <html>/<head>/<body>)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';

@@ -1,7 +1,7 @@
 # Guide d'écriture du contenu CodeQuest
 
 Ce guide décrit comment écrire les parcours, leçons et exercices de CodeQuest (fichiers `src/content/*.js`)
-et comment les vérifier avec `node codequest/tools/validate.mjs <fichier>`.
+et comment les vérifier avec `node tools/validate.mjs <fichier>`.
 
 ## 1. Le public
 
@@ -288,7 +288,7 @@ Les objets renvoyés ont `ok`, `status`, `json()` et `text()`.
 ## 6. Vérification
 
 ```
-node codequest/tools/validate.mjs codequest/src/content/mon-fichier.js
+node tools/validate.mjs src/content/mon-fichier.js
 ```
 Exercices HTML : si le code contient `<!doctype` ou `<html`, il est rendu comme un document complet ; sinon il est placé dans le `<body>` d'une page.
 

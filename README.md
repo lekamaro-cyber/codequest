@@ -6,11 +6,12 @@ CodeQuest est une application d'apprentissage de la programmation, sur le princi
 mais avec sa propre identité : leçons courtes, exercices interactifs, révisions espacées, projets guidés.
 Elle tient dans une seule page web, sans compte, sans abonnement et sans clé d'API.
 
-Ce dossier est indépendant du jeu Ajusto (qui reste à la racine du dépôt pour ne pas casser l'appli déjà installée).
+L'application a d'abord été construite dans le dépôt `pile-poil` (à côté du jeu Ajusto), puis transférée ici avec son historique.
 
 ## Ouvrir l'application
 
-- **Sur ton ordinateur** : ouvre `codequest/index.html` dans Chrome, Edge ou Firefox (double-clic).
+- **Sur GitHub Pages** : https://lekamaro-cyber.github.io/codequest/ (une fois Pages activé pour ce dépôt).
+- **Sur ton ordinateur** : télécharge le dépôt et ouvre `index.html` dans Chrome, Edge ou Firefox (double-clic).
 - **En ligne** : l'artefact Claude https://claude.ai/artifact/DK7QKud74uLFmZH1J3qu7K (privé : visible seulement par
   son propriétaire et les personnes avec qui il est partagé). Il sauvegarde ta progression sur ton compte claude.ai.
 
@@ -57,8 +58,8 @@ src/app.css    styles
 ```
 
 1. Modifier les fichiers de `src/`.
-2. Vérifier le contenu : `node codequest/tools/validate.mjs` (exécute réellement chaque exemple et chaque exercice ;
-   la première fois : `cd codequest/tools && npm install`).
-3. Assembler : `node codequest/build.mjs` → `codequest/index.html`.
+2. Vérifier le contenu : `node tools/validate.mjs` (exécute réellement chaque exemple et chaque exercice ;
+   la première fois : `cd tools && npm install`).
+3. Assembler : `node build.mjs` → `index.html`.
 
 Le guide d'écriture des leçons est dans `CONTENT-GUIDE.md`.

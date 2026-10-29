@@ -3,8 +3,8 @@
 // (python3, node, gcc, g++, java, php, bash, tsc, SQLite via sql.js, Chromium pour HTML/CSS et DOM).
 //
 // Utilisation :
-//   node codequest/tools/validate.mjs                       -> tous les fichiers de src/content
-//   node codequest/tools/validate.mjs src/content/sql.js    -> seulement ce fichier (les autres sont chargés pour les références)
+//   node tools/validate.mjs                       -> tous les fichiers de src/content
+//   node tools/validate.mjs src/content/sql.js    -> seulement ce fichier (les autres sont chargés pour les références)
 //   options : --minipy (compare aussi avec l'interpréteur MiniPy), --no-browser, --quiet
 import fs from 'node:fs';
 import path from 'node:path';
